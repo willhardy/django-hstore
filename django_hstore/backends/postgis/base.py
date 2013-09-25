@@ -63,7 +63,7 @@ class DatabaseCreation(PostGISCreation):
             return
         if get_version(self.connection) >= 90100:
             cursor.execute("create extension hstore;")
-            self.connection.commit_unless_managed()
+            #self.connection.commit_unless_managed()
             return
         import glob
         import os
